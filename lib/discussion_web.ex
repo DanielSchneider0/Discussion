@@ -21,9 +21,22 @@ defmodule DiscussionWeb do
     quote do
       use Phoenix.Controller, namespace: DiscussionWeb
 
+      import Ecto
+      import Ecto.Query
+
       import Plug.Conn
       import DiscussionWeb.Gettext
       alias DiscussionWeb.Router.Helpers, as: Routes
+    end
+  end
+
+  def model do
+    quote do
+      use Ecto.Schema
+
+      import Ecto
+      import Ecto.Changeset
+      import Ecto.Query
     end
   end
 
