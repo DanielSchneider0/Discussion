@@ -23,6 +23,7 @@ defmodule DiscussionWeb do
 
       import Ecto
       import Ecto.Query
+      import Ecto.Repo
 
       import Plug.Conn
       import DiscussionWeb.Gettext
