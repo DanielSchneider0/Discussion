@@ -17,7 +17,7 @@ defmodule DiscussionWeb.Router do
   scope "/", DiscussionWeb do
     pipe_through(:browser)
 
-    get("/", PageController, :index)
+    get("/", TopicController, :index)
     get("/topics/new", TopicController, :new)
     post("/topics", TopicController, :create)
   end
