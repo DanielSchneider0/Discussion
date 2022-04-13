@@ -1,5 +1,5 @@
-defmodule DisscussionWeb.AuthController do
-  use DisscussionWeb, :controller
+defmodule DiscussionWeb.AuthController do
+  use DiscussionWeb, :controller
   plug(Ueberauth)
 
   def callback(conn, params) do
