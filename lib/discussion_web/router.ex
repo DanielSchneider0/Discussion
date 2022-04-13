@@ -23,7 +23,7 @@ defmodule DiscussionWeb.Router do
     # get("/topics/:id/edit", TopicController, :edit)
     # put("/topics/:id", TopicController, :update)
     get("/", TopicController, :index)
-    resources("topics", TopicController, except: [:index])
+    resources("/topics", TopicController, except: [:index])
   end
 
   # Other scopes may use custom stacks.
