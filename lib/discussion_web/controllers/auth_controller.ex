@@ -9,7 +9,7 @@ defmodule DiscussionWeb.AuthController do
     user_params = %{
       token: auth.credentials.token,
       email: auth.info.email,
-      provider: auth.provider
+      provider: to_string(auth.provider)
     }
 
     changeset = User.changeset(%User{}, user_params)
