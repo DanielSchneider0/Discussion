@@ -8,6 +8,7 @@ defmodule DiscussionWeb.Router do
     plug(:put_root_layout, {DiscussionWeb.LayoutView, :root})
     plug(:protect_from_forgery)
     plug(:put_secure_browser_headers)
+    plug(DiscussionWeb.Plugs.SetUser)
   end
 
   pipeline :api do
@@ -29,6 +30,7 @@ defmodule DiscussionWeb.Router do
   scope "/auth", DiscussionWeb do
     pipe_through(:browser)
 
+    get("/signout", AuthController, :signout)
     get("/:provider", AuthController, :request)
     get("/:provider/callback", AuthController, :callback)
   end
