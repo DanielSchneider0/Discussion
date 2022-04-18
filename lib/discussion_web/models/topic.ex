@@ -3,6 +3,7 @@ defmodule DiscussionWeb.Topic do
 
   schema "topics" do
     field(:title, :string)
+    belongs_to(:user, DiscussionWeb.User)
   end
 
   def changeset(struct, params \\ %{}) do
