@@ -1,10 +1,10 @@
-defmodule DisscussionWeb.Comment do
+defmodule DiscussionWeb.Comment do
   use DiscussionWeb, :model
 
   schema "comments" do
     field(:content, :string)
-    belongs_to(:user, DisscussionWeb.User)
-    belongs_to(:topic, DisscussionWeb.Topic)
+    belongs_to(:user, DiscussionWeb.User)
+    belongs_to(:topic, DiscussionWeb.Topic)
 
     timestamps()
   end

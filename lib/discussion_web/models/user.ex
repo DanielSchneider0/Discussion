@@ -5,8 +5,9 @@ defmodule DiscussionWeb.User do
     field(:email, :string)
     field(:provider, :string)
     field(:token, :string)
-    has_many(:topics, DiscussionWeb.Topic)
     has_many(:comments, DiscussionWeb.Comment)
+    has_many(:topics, DiscussionWeb.Topic)
+
     timestamps()
   end
 
