@@ -8,6 +8,8 @@ import { Socket } from "phoenix";
 // token for authentication. Read below how it should be used.
 let socket = new Socket("/socket", { params: { token: window.userToken } });
 
+console.log(window);
+
 // When you connect, you'll often need to authenticate the client.
 // For example, imagine you have an authentication plug, `MyAuth`,
 // which authenticates the session and assigns a `:current_user`.

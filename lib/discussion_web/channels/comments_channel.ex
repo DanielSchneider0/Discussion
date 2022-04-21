@@ -5,8 +5,7 @@ defmodule DiscussionWeb.CommentsChannel do
     {:ok, %{hey: "there"}, socket}
   end
 
-  def handle_in(name) do
-    IO.puts("&&&&&&&&&&&")
-    IO.puts(name)
+  def handle_in(name, message, socket) do
+    {:reply, :ok, socket}
   end
 end
