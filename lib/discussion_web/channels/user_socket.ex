@@ -10,8 +10,6 @@ defmodule DiscussionWeb.UserSocket do
 
   channel("comments:*", DiscussionWeb.CommentsChannel)
 
-  transport(:websocket, Phoenix.Transports.WebSocket)
-
   # Socket params are passed from the client and can
   # be used to verify and authenticate a user. After
   # verification, you can put default assigns into
@@ -30,7 +28,7 @@ defmodule DiscussionWeb.UserSocket do
       {:ok, user_id} ->
         {:ok, assign(socket, :user, user_id)}
 
-      {:error, reason} ->
+      {:error, _reason} ->
         :error
     end
   end
